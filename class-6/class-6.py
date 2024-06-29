@@ -1,1 +1,1 @@
-p
+print('class 6')
