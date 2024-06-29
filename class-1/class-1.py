@@ -1,4 +1,4 @@
-print('class one')
+print('welcome to pyton')
 
 # add the numiral 
 x = 23
