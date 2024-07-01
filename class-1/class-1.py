@@ -46,3 +46,12 @@ age1 = 25
 age =+ 5
 count_age = age1+age
 print(count_age)  
+
+# fload 
+num_1 = 5.13
+print(type(num_1))
+
+# Boolean 
+
+technical_error = True 
+print(type(technical_error))
