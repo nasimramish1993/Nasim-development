@@ -104,7 +104,7 @@
 # print('they are the same')
 
 
-temp_f =87
+temp_f =45
 
 if temp_f > 75:
   print('outside is too hot')
@@ -121,3 +121,11 @@ else:
     print('y bigeer than x')
   else:
     print('they are the same')
+
+    if temp_f > 75:
+      print('outside is hot')
+    elif temp_f > 40 and temp_f <= 75:
+      print('outside is normal')
+    else:
+      print('the weather is cold')
+
