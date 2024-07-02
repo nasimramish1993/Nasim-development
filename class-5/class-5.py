@@ -105,14 +105,21 @@
 
 # print(name[len(name) - 1])
 
-month = '    february   '
-new_month = month.strip()
-print(len(new_month))
-print(len(month))
+# month = '    february   '
+# new_month = month.strip()
+# print(len(new_month))
+# print(len(month))
 
-User = input('put the special word: ')
-clean_word = User. strip()
-word_lenght = len(User)
-half_index = (word_lenght// 2)
-second_half = clean_word[half_index:]
+# User = input('put the special word: ')
+# clean_word = User. strip()
+# word_lenght = len(User)
+# half_index = (word_lenght// 2)
+# second_half = clean_word[half_index:]
+# print(second_half)
+
+user = input('please enter your keyword: ')
+clean_word = user.strip()
+length_word = len(clean_word)
+half_lengnth = (length_word// 2)
+second_half = clean_word[half_lengnth:]
 print(second_half)
