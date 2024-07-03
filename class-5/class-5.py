@@ -117,9 +117,37 @@
 # second_half = clean_word[half_index:]
 # print(second_half)
 
-user = input('please enter your keyword: ')
-clean_word = user.strip()
-length_word = len(clean_word)
-half_lengnth = (length_word// 2)
-second_half = clean_word[half_lengnth:]
-print(second_half)
+# user = input('please enter your keyword: ')
+# clean_word = user.strip()
+# length_word = len(clean_word)
+# half_lengnth = (length_word// 2)
+# second_half = clean_word[half_lengnth:]
+# print(second_half)
+
+# this example shows how a while loop will break at the top of each loop when it checks if the conditional is true 
+# create an empty string for to user to initialize it 
+# user = 'wrong '
+# while user != 'stop':
+#     user =  input('Enter something or "stop" to stop: ')
+#     print(user) 
+#     print('please enter your password correct')
+#     continue
+
+# user = ' '
+# while True: 
+#     user = input('Enter something ot "stop" to stop ')
+#     if (user == 'stop'):
+#         break
+#     print(user)
+
+l = ()
+user = '  '
+
+while user != 'stop':
+    user = input('Enter something or "stop" to stop: ')
+    if l in user:
+     if l.isalpha():
+        print(l)
+    else:
+        break
+    print()
