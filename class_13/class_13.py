@@ -42,9 +42,11 @@ dog = {
 }
 
 # Let's look at our keys
-
-
+print(f'the key for the dog dictionary are {dog.keys()}')
 # or set it as a variable?
+dog_new = {}
+dog_new= dog.keys()
+# print(dog_new)
 
 
 
@@ -57,10 +59,11 @@ dog = {
 }
 
 # Lets look at our values
-
+# print(f'the value for the dog dictionary are {dog.values()}')
 
 # or set to a variable
-
+dog_values = dog.values()
+# print(dog_values)
 # Lets use clear method to remove all elements
 
 dog = {
@@ -68,6 +71,8 @@ dog = {
     "gender": "female",
     "age": 7
 }
+dog.clear()
+# print(dog)
 
 # Lets use get method to get a key value
 
@@ -76,11 +81,13 @@ dog = {
     "gender": "female",
     "age": 7
 }
-
+# print(dog.get("age"))
+# print(dog.get('nasim'))
 
 
 # lets look at one of the parameters to show an error if the key doesnt exist
-
+# print(dog.get('breed'))
+# print(dog.get('nasim', 'this peramiter does not exist in dictionary'))
 
 
 # Lets create a copy
@@ -91,9 +98,8 @@ dog = {
     "age": 7
 }
 
-
-
-
+dog_copy = dog.copy()
+# print(dog_copy)
 
 # Lets remove a specified key with pop
 dog = {
@@ -101,7 +107,11 @@ dog = {
     "gender": "male",
     "age": 7
 }
-
+dog.pop('breed')
+# print(dog)
+gender = dog.pop('gender')
+print(gender)
+# print(dog)
 
 # Lets remove a last inserted key-value pair with popitem
 dog = {
@@ -109,7 +119,8 @@ dog = {
     "gender": "male",
     "age": 7
 }
-
+dog.popitem()
+# print(dog)
 
 # Get a list with each key-value pair with items
 dog = {
@@ -117,7 +128,8 @@ dog = {
     "gender": "male",
     "age": 7
 }
-
+new_list = dog.items()
+# print(new_list)
 
 
 
@@ -127,15 +139,21 @@ dog = {
     "gender": "male",
     "age": 7
 }
+for key , value in dog.items():
+    # print(key, value, end= '/')
 
 
 
 # Update dictionary
-dog = {
+ dog = {
     "breed": "japanese chin",
     "gender": "male",
     "age": 7
 }
+
+dog.update({'name': 'nasim'})
+# print(dog)
+
 
 
 
@@ -144,13 +162,16 @@ dog = {
 
 
 # Dictionaries vs Lists
-# list1 = ['a', 'b', 'c', 'd', 'e']
-# dict1 = {0: 'a', 1: 'b', 2: 'c', 3: 'd', 5: 'e'}
+list1 = ['a', 'b', 'c', 'd', 'e']
+dict1 = {0: 'a', 1: 'b', 2: 'c', 3: 'd', 5: 'e'}
+# print(list1[0])
+# print(dict1[2])
+add_name = {'nasim': 'muhsiny'}
+dict1.update({'nasim': 'muhsiny'})
+# print(dict1)
 
-
-
-
-
+dict1[2]= 'nasim'
+# print(dict1)
 '''
 Write some code that takes two lists and converts them into one dictionary.
 In:
@@ -164,6 +185,10 @@ Out:
 list1 = ['one', 'two', 'three']
 list2 = [4, 10, 30]
 
+dict3 = {}
+for m in range(len(list1)):
+    dict3[list1[m]]= list2[m]
+    print(dict3)
 
 
 
@@ -178,13 +203,13 @@ my_values = [4, 10, 30]
 # create an empty dictionary to add key value pair into 
 
 dict1 = {}
-m = ""
+
 for m in range(len(my_keys)):
     dict1[my_keys[m]] = my_values[m]
-# print(dict1)
+print(dict1)
 
 dict1 = dict(zip(my_keys, my_values))
-print(dict1)
+# print(dict1)
 
 
 
@@ -204,7 +229,7 @@ languages = { 'USA': 'English', 'Mexico': 'Spanish', 'France': 'French', 'Portug
 country = ''
 language = ''
 # for country , language in languages.items():
-print(f'the language of {country}, is {language}')
+# print(f'the language of {country}, is {language}')
 
 # As datasets, we can use bracket notation
 
@@ -217,8 +242,8 @@ orange = choices["flavors"][2]
 large = choices["sizes"][0]
 medium = choices["sizes"][1]
 small = choices["sizes"][2]
-print(strawbarry, vanilla, orange)
-print(small, medium,large)
+# print(strawbarry, vanilla, orange)
+# print(small, medium,large)
 # Lets make a dataframe out of this
 
 
@@ -240,7 +265,7 @@ import pandas as pd
 vehicals.update({'num plate': [21345, 123456 , 45678, 3456]})
 
 vehical_new_list = pd.DataFrame(vehicals)
-print(vehical_new_list)
+# print(vehical_new_list)
 
 '''
 In statistics, the mode is the value that appears most frequently in a dataset.
@@ -257,7 +282,7 @@ for m in my_list_items:
         output[m] =1
     else:
         output[m] +=1
-print(output)
+# print(output)
 
 
 
@@ -265,13 +290,13 @@ print(output)
 
 for m in my_list_items:
     output[m]= my_list_items.count(m)
-print(output)
+# print(output)
 
 
 # from statistics import mode
 from statistics import mode
 result = mode(my_list_items)
-print(f'the mode is {result}')
+# print(f'the mode is {result}')
 
 '''
 Suppose you have a list of employee records that contain the following information for each employee: name, job title, salary. The records are stored as a list of dictionaries.
@@ -309,4 +334,4 @@ for salary in developer_salaries:
     developer_ave /= len(developer_salaries)
 output['manager'] = manager_ave
 output['developer'] = developer_ave
-print(output)
+# print(output)
