@@ -188,7 +188,7 @@ list2 = [4, 10, 30]
 dict3 = {}
 for m in range(len(list1)):
     dict3[list1[m]]= list2[m]
-    print(dict3)
+print(dict3)
 
 
 
@@ -206,7 +206,7 @@ dict1 = {}
 
 for m in range(len(my_keys)):
     dict1[my_keys[m]] = my_values[m]
-print(dict1)
+# print(dict1)
 
 dict1 = dict(zip(my_keys, my_values))
 # print(dict1)
@@ -245,7 +245,10 @@ small = choices["sizes"][2]
 # print(strawbarry, vanilla, orange)
 # print(small, medium,large)
 # Lets make a dataframe out of this
-
+import pandas as pd 
+choices.update({'vehicals': ['kia', 2012, 'white']})
+choices_df = pd.DataFrame(choices)
+print(choices_df)
 
 # Lets rename the columns
 
