@@ -268,7 +268,7 @@ import pandas as pd
 vehicals.update({'num plate': [21345, 123456 , 45678, 3456]})
 
 vehical_new_list = pd.DataFrame(vehicals)
-# print(vehical_new_list)
+print(vehical_new_list)
 
 '''
 In statistics, the mode is the value that appears most frequently in a dataset.
