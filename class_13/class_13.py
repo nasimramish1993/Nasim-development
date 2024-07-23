@@ -285,7 +285,7 @@ for m in my_list_items:
         output[m] =1
     else:
         output[m] +=1
-# print(output)
+print(output)
 
 
 
@@ -293,13 +293,13 @@ for m in my_list_items:
 
 for m in my_list_items:
     output[m]= my_list_items.count(m)
-# print(output)
+print(output)
 
 
 # from statistics import mode
 from statistics import mode
 result = mode(my_list_items)
-# print(f'the mode is {result}')
+print(f'the mode is {result}')
 
 '''
 Suppose you have a list of employee records that contain the following information for each employee: name, job title, salary. The records are stored as a list of dictionaries.
@@ -337,4 +337,4 @@ for salary in developer_salaries:
     developer_ave /= len(developer_salaries)
 output['manager'] = manager_ave
 output['developer'] = developer_ave
-# print(output)
+print(output)
