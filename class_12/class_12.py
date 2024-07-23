@@ -8,3 +8,6 @@ states = {'california', 'new york', 'vermont', 'connecticut'}
 
 states.remove('vermont')
 print(states)
+
+
+
